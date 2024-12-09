@@ -18,28 +18,19 @@ chmod +x xhash.py
 mv xhash.py /usr/local/bin/xhash
 ```
 
-Per stampare il contenuto della variabile PATH su Linux utilizza:
-
-```bash
-echo $PATH # 
-printenv PATH
-env | grep PATH
-```
+> [!TIP]
+> Per stampare il contenuto della variabile d'ambiente `PATH` su Linux utilizza `echo $PATH`.
 
 ### Windows 11
 
-- Sposta lo script in una directory inclusa nella variabile d'ambiente `PATH` di Windows, come `C:\Users\<tuo_nome_utente>\AppData\Local\Programs\Python\Python<versione>\Scripts`, oppure creane una e aggiungila a PATH con il comando `setx PATH "%PATH%;C:\Path\to\dir`.
+Sposta lo script in una directory inclusa nella variabile d'ambiente `PATH` di Windows, come `C:\Users\<tuo_nome_utente>\AppData\Local\Programs\Python\Python<versione>\Scripts`, oppure creane una e aggiungila a PATH con il comando `setx PATH "%PATH%;C:\Path\to\dir`.
 
-- Per stampare il contenuto della variabile PATH su Windows 11 puoi utilizzare:
+> [!TIP]
+> Per stampare il contenuto della variabile d'ambiente `PATH` su Windows 11 utilizza `echo %PATH%` (Prompt dei comandi) o `$Env:PATH` (PowerShell).
 
-    ```bash
-    echo %PATH%  # Prompt dei comandi
-    $Env:PATH    # PowerShell
-    ```
+Rendi lo script eseguibile senza `python`:
 
-- Rendi lo script eseguibile senza `python`:
-
-    Crea un file `xhash.bat` (o `xhash.cmd`) nella stessa directory:
+- Crea un file `xhash.bat` (o `xhash.cmd`) nella stessa directory:
 
     ```bat
     @echo off
