@@ -19,23 +19,21 @@ mv xhash.py /usr/local/bin/xhash
 ```
 
 > [!TIP]
-> Per stampare il contenuto della variabile d'ambiente `PATH` su Linux utilizza `echo $PATH`.
+> To print the contents of the environment variable `PATH` on Linux, use `echo $PATH`.
 
 ### Windows 11
 
-Sposta lo script in una directory inclusa nella variabile d'ambiente `PATH` di Windows, come `C:\Users\<tuo_nome_utente>\AppData\Local\Programs\Python\Python<versione>\Scripts`, oppure creane una e aggiungila a PATH con il comando `setx PATH "%PATH%;C:\Path\to\dir`.
+Move the script to a directory included in the Windows environment variable `PATH`, such as `C:\Users\<your_user_name>\AppData\Local\Programs\Python\Python<version>\Scripts`, or create one and add it to PATH with the command `setx PATH "%PATH%;C:\Path\to\dir`.
 
 > [!TIP]
-> Per stampare il contenuto della variabile d'ambiente `PATH` su Windows 11 utilizza `echo %PATH%` (Prompt dei comandi) o `$Env:PATH` (PowerShell).
+> To print the contents of the environment variable `PATH` on Windows 11 use either `echo %PATH%` (Command Prompt) or `$Env:PATH`(PowerShell).
 
-Rendi lo script eseguibile senza `python`:
+Crea un file `xhash.bat` (o `xhash.cmd`) nella stessa directory per rendere lo script eseguibile senza digitare `python3`.
 
-- Crea un file `xhash.bat` (o `xhash.cmd`) nella stessa directory:
-
-    ```bat
-    @echo off
-    python "C:\scripts\xhash.py" %*
-    ```
+```bat
+@echo off
+python "C:\Path\to\dir\xhash.py" %*
+```
 
 ## Run script
 
@@ -75,5 +73,5 @@ dos2unix xhash.py
 Se l'errore persiste, verifica di non avere ulteriori caratteri nascosti nel file con:
 
 ```bash
-cat -A $HOME/.local/bin/xhash
+cat -A /usr/local/bin/xhash
 ```
