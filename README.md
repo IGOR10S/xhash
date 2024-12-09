@@ -25,8 +25,7 @@ mv xhash.py /usr/local/bin/xhash
 
 Sposta lo script in una directory inclusa nella variabile d'ambiente `PATH` di Windows, come `C:\Users\<tuo_nome_utente>\AppData\Local\Programs\Python\Python<versione>\Scripts`, oppure creane una e aggiungila a PATH con il comando `setx PATH "%PATH%;C:\Path\to\dir`.
 
-> [!TIP]
-> Per stampare il contenuto della variabile d'ambiente `PATH` su Windows 11 utilizza `echo %PATH%` (Prompt dei comandi) o `$Env:PATH` (PowerShell).
+> [!TIP] > Per stampare il contenuto della variabile d'ambiente `PATH` su Windows 11 utilizza `echo %PATH%` (Prompt dei comandi) o `$Env:PATH` (PowerShell).
 
 Rendi lo script eseguibile senza `python`:
 
