@@ -68,4 +68,3 @@ Start the procedure again and convert the file with the command `dos2unix xhash.
 
 > [!TIP]
 > If the error persists, check to see if you have any more hidden characters in the file with `cat -A /usr/local/bin/xhash`.
-
