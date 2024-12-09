@@ -25,7 +25,8 @@ mv xhash.py /usr/local/bin/xhash
 
 Sposta lo script in una directory inclusa nella variabile d'ambiente `PATH` di Windows, come `C:\Users\<tuo_nome_utente>\AppData\Local\Programs\Python\Python<versione>\Scripts`, oppure creane una e aggiungila a PATH con il comando `setx PATH "%PATH%;C:\Path\to\dir`.
 
-> [!TIP] > Per stampare il contenuto della variabile d'ambiente `PATH` su Windows 11 utilizza `echo %PATH%` (Prompt dei comandi) o `$Env:PATH` (PowerShell).
+> [!TIP]
+> Per stampare il contenuto della variabile d'ambiente `PATH` su Windows 11 utilizza `echo %PATH%` (Prompt dei comandi) o `$Env:PATH` (PowerShell).
 
 Rendi lo script eseguibile senza `python`:
 
@@ -46,15 +47,14 @@ Now you can start the script just typing `xhash` everywhere.
 
 ## Problemi noti
 
+```bash
+$ xhash 
+/usr/bin/env: ‘python3\r’: No such file or directory
+/usr/bin/env: use -[v]S to pass options in shebang lines
+$
+```
+
 > [!CAUTION]
->
-> ```bash
-> $ xhash 
-> /usr/bin/env: ‘python3\r’: No such file or directory
-> /usr/bin/env: use -[v]S to pass options in shebang lines
-> $
-> ```
->
 > Questo errore viene riscontrato a causa dalla presenza di caratteri di fine riga in stile Windows (`\r\n`) nel file invece dei caratteri di fine riga in stile Unix (`\n`). Questo può succedere se il file è stato creato o modificato su Windows e poi trasferito su Linux senza conversione.
 
 ### Soluzione
