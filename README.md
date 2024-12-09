@@ -19,31 +19,31 @@ mv xhash.py /usr/local/bin/xhash
 ```
 
 > [!TIP]
-> To print the contents of the environment variable `PATH` on Linux, use `echo $PATH`.
+> To print the contents of `PATH` on Linux, use `echo $PATH`.
 
 ### Windows 11
 
-Move the script to a directory included in the Windows environment variable `PATH`, such as `C:\Users\<your_user_name>\AppData\Local\Programs\Python\Python<version>\Scripts`, or create one and add it to PATH with the command `setx PATH "%PATH%;C:\Path\to\dir`.
+Move the script to a directory included in the Windows `PATH`, such as `C:\Users\<your_user_name>\AppData\Local\Programs\Python\Python<version>\Scripts`, or create one and add it to PATH with the command `setx PATH "%PATH%;C:\Path\to\dir`.
 
 > [!TIP]
-> To print the contents of the environment variable `PATH` on Windows 11 use either `echo %PATH%` (Command Prompt) or `$Env:PATH`(PowerShell).
+> To print the contents of `PATH` on Windows 11 use either `echo %PATH%` (Command Prompt) or `$Env:PATH`(PowerShell).
 
-Crea un file `xhash.bat` (o `xhash.cmd`) nella stessa directory per rendere lo script eseguibile senza digitare `python3`.
+Create a file `xhash.bat`(or `xhash.cmd`) in the same directory to make the script executable without typing `python3`:
 
 ```bat
 @echo off
-python "C:\Path\to\dir\xhash.py" %*
+python3 "C:\Path\to\xhash.py" %*
 ```
 
 ## Run script
+
+Now you can start the script by typing `xhash` anywhere:
 
 ```bash
 xhash -h
 ```
 
-Now you can start the script just typing `xhash` everywhere.
-
-## Problemi noti
+## Known issues (Linux only)
 
 ```bash
 $ xhash 
@@ -53,25 +53,18 @@ $
 ```
 
 > [!CAUTION]
-> Questo errore viene riscontrato a causa dalla presenza di caratteri di fine riga in stile Windows (`\r\n`) nel file invece dei caratteri di fine riga in stile Unix (`\n`). Questo può succedere se il file è stato creato o modificato su Windows e poi trasferito su Linux senza conversione.
+> This error is caused by the file having **Windows-style** (`\r\n`) endline characters instead of **Unix-style** (`\n`) endline characters. This can happen if the file was created or modified on Windows and then transferred to Linux without conversion.
 
-### Soluzione
+### Solution (Linux only)
 
-Installa **dos2unix**:
+Install **dos2unix**:
 
 ```bash
 sudo dnf install dos2unix  # Fedora
 sudo apt install dos2unix  # Ubuntu/Debian
 ```
 
-Utilizza il comando `dos2unix` per convertire il file:
+Start the procedure again and convert the file with the command `dos2unix xhash.py` before adding it to the `PATH`.
 
-```bash
-dos2unix xhash.py
-```
-
-Se l'errore persiste, verifica di non avere ulteriori caratteri nascosti nel file con:
-
-```bash
-cat -A /usr/local/bin/xhash
-```
+> [!TIP]
+> If the error persists, check to see if you have any more hidden characters in the file with `cat -A /usr/local/bin/xhash`.
