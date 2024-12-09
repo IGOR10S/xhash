@@ -39,12 +39,12 @@ env | grep PATH
 
 - Rendi lo script eseguibile senza `python`:
 
-    - Crea un file `xhash.bat` (o `xhash.cmd`) nella stessa directory:
+    Crea un file `xhash.bat` (o `xhash.cmd`) nella stessa directory:
 
-        ```bat
-        @echo off
-        python "C:\scripts\xhash.py" %*
-        ```
+    ```bat
+    @echo off
+    python "C:\scripts\xhash.py" %*
+    ```
 
 ## Run script
 
@@ -81,10 +81,6 @@ Utilizza il comando `dos2unix` per convertire il file:
 ```bash
 dos2unix xhash.py
 ```
-
-
-
-
 
 Se l'errore persiste, verifica di non avere ulteriori caratteri nascosti nel file con:
 
