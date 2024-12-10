@@ -9,7 +9,7 @@ git clone https://github.com/IGOR10S/xhash.git
 cd xhash
 ```
 
-## Add to the PATH
+## Add to PATH
 
 ### Linux
 
@@ -55,7 +55,7 @@ $
 > [!CAUTION]
 > This error is caused by the file having **Windows-style** (`\r\n`) endline characters instead of **Unix-style** (`\n`) endline characters. This can happen if the file was created or modified on Windows and then transferred to Linux without conversion.
 
-### Solution (Linux only)
+### Solution
 
 Install **dos2unix**:
 
@@ -64,7 +64,10 @@ sudo dnf install dos2unix  # Fedora
 sudo apt install dos2unix  # Ubuntu/Debian
 ```
 
-Start the procedure again and convert the file with the command `dos2unix xhash.py` before adding it to the `PATH`.
+Start again with [Clone the repo] and convert the file with the command `dos2unix xhash.py` before adding it to the `PATH`.
 
 > [!TIP]
 > If the error persists, check to see if you have any more hidden characters in the file with `cat -A /usr/local/bin/xhash`.
+
+<!-- Link -->
+[Clone the repo]:https://github.com/IGOR10S/xhash#clone-the-repo
