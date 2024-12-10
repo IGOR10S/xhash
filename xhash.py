@@ -41,8 +41,7 @@ def main():
         epilog="Example of use:\n"
                "  $ python %(prog)s -t s -a sha224 -v Hello!\n"
                "  $ python %(prog)s -t s -a sha224 -v \"Hello World!\"\n"
-               "  $ python %(prog)s -t f -a sha224 -v path/to/file.txt\n"
-               "  $ python %(prog)s -t f -a sha224 -v /home/user/Documents/path/to/file.txt",
+               "  $ python %(prog)s -t f -a sha224 -v /home/user/path/to/file.txt",
         formatter_class=argparse.RawTextHelpFormatter
     )
     # Definition of arguments
