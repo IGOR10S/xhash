@@ -46,10 +46,8 @@ xhash -h
 ## Known issues (Linux only)
 
 ```bash
-$ xhash 
 /usr/bin/env: ‘python3\r’: No such file or directory
 /usr/bin/env: use -[v]S to pass options in shebang lines
-$
 ```
 
 > [!CAUTION]
