@@ -23,17 +23,17 @@ mv xhash.py /usr/local/bin/xhash
 
 ### Windows 11
 
-Move the script to a directory included in the Windows `PATH`, such as `C:\Users\<your_user_name>\AppData\Local\Programs\Python\Python<version>\Scripts`, or create one and add it to PATH with the command `setx PATH "%PATH%;C:\Path\to\dir"`.
+1. Move the script to a directory included in the Windows `PATH`, such as `C:\Users\<your_user_name>\AppData\Local\Programs\Python\Python<version>\Scripts`, or create one and add it to PATH with the command `setx PATH "%PATH%;C:\Path\to\dir"`.
 
-> [!TIP]
-> To print the contents of `PATH` on Windows 11 use either `echo %PATH%` (Command Prompt) or `$Env:PATH`(PowerShell).
+    > [!TIP]
+    > To print the contents of `PATH` on Windows 11 use either `echo %PATH%` (Command Prompt) or `$Env:PATH`(PowerShell).
 
-Create a file `xhash.bat`(or `xhash.cmd`) in the same directory to make the script executable without typing `python3`:
+2. Create a file `xhash.bat`(or `xhash.cmd`) in the same directory to make the script executable without typing `python3`:
 
-```bat
-@echo off
-python3 "C:\Path\to\xhash.py" %*
-```
+    ```bat
+    @echo off
+    python3 "C:\Path\to\xhash.py" %*
+    ```
 
 ## Run script
 
