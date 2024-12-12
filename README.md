@@ -26,7 +26,7 @@ mv xhash.py /usr/local/bin/xhash
 1. Move the script to a directory included in the Windows `PATH`, such as `C:\Users\<your_user_name>\AppData\Local\Programs\Python\Python<version>\Scripts`, or create one and add it to PATH with:
 
     ```bash
-    setx PATH "%PATH%;C:\Path\to\dir".
+    setx PATH "%PATH%;C:\Path\to\dir"
     ```
 
 > [!TIP]
