@@ -30,9 +30,9 @@ mv xhash.py /usr/local/bin/xhash
     ```
 
 > [!TIP]
-> To print the contents of `PATH` on Windows 11 use either `echo %PATH%` (Command Prompt) or `$Env:PATH`(PowerShell).
+> To print the contents of `PATH` on Windows 11 use either `echo %PATH%` (Command Prompt) or `$Env:PATH` (PowerShell).
 
-2. Create a file `xhash.bat`(or `xhash.cmd`) in the same directory to make the script executable without typing `python3`:
+2. Create a file `xhash.bat` (or `xhash.cmd`) in the same directory to make the script executable without typing `python3`:
 
     ```bat
     @echo off
