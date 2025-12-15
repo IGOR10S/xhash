@@ -66,10 +66,7 @@ sudo dnf install dos2unix  # Fedora
 sudo apt install dos2unix  # Ubuntu/Debian
 ```
 
-Start again with [Clone the repo] and convert the file with the command `dos2unix xhash.py` before adding it to the `PATH`.
+Start again with [Clone the repo](#clone-the-repo) and convert the file with the command `dos2unix xhash.py` before adding it to the `PATH`.
 
 > [!TIP]
 > If the error persists, check to see if you have any more hidden characters in the file with `cat -A /usr/local/bin/xhash`.
-
-<!-- Link -->
-[Clone the repo]:https://github.com/IGOR10S/xhash#clone-the-repo
